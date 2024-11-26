@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+{%block content%}
+<center>
+  <h1><br/>Heart Disease Prediction<br/><br/></h1>
+  <div class="form-style-3">
+    <form action="{{url_for('predictheartdisease')}}" method="post">
+      <fieldset>
+        <legend>Please Provide The Details</legend>
+        <label for="field1"><span>Age</span><input type="number" placeholder="Age" class="input-field" name="field1" required /></label>
+        <label for="field2"><span>Sex</span><input type="number" placeholder="0 for Female, 1 for Male" class="input-field" name="field2" required /></label>
+        <label for="field3"><span>CP</span><input type="number" placeholder="0-3" class="input-field" name="field3" required /></label>
+        <label for="field4"><span>RestBP</span><input type="number" placeholder="94-200" class="input-field" name="field4" required /></label>
+        <label for="field5"><span>Chol</span><input type="number" placeholder="126-564" class="input-field" name="field5" required /></label>
+        <label for="field6"><span>FBS</span><input type="number" placeholder="0 or 1" class="input-field" name="field6" required /></label>
+        <label for="field7"><span>RestECG</span><input type="number" placeholder="0-2" class="input-field" name="field7" required /></label>
+        <label for="field8"><span>Thalach</span><input type="number" placeholder="71-202" class="input-field" name="field8" required /></label>
+        <label for="field9"><span>Exang</span><input type="number" placeholder="0 or 1" class="input-field" name="field9" required /></label>
+        <label for="field10"><span>Oldpeak</span><input type="number" placeholder="0-6.20" class="input-field" name="field10" required /></label>
+        <label><span></span><input type="submit" value="Predict" /></label>
+      </fieldset>
+    </form>
+    <h2>{{output_text}}</h2>
+  </div>
+</center>
+{%endblock%}
